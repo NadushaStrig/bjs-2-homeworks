@@ -1,13 +1,24 @@
+'use strict'
 function solveEquation(a, b, c) {
   let arr;
-  // код для задачи №1 писать здесь
-  return arr; // array
-}
+  let D = b ** 2 - 4*a*c;
+  let x1;
+  let x2; 
 
-function calculateTotalMortgage(percent, contribution, amount, date) {
-  let totalAmount;
+  if (D < 0) {
+    arr = [];
+  }
 
-  // код для задачи №2 писать здесь
+  else if (D === 0){
+    x1 = -b/(2*a); 
+    arr = [x1];
+  }
+  
+  else if (D > 0){
+    x1 = Math. trunc(-b + Math.sqrt(D))/(2*a);
+    x2 = Math. trunc(-b - Math.sqrt(D))/(2*a);
+    arr = [x1, x2]
+  }
 
-  return totalAmount;
+    return arr;
 }
